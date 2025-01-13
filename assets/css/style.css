@@ -17041,7 +17041,7 @@ button:focus {
 .product-gallery-vertical .product-image-gallery,
 .product-gallery-vertical .product-main-image {
   width: 100%;
-  height: 500px;
+  /* height: 500px; */
 }
 
 .product-gallery-vertical .product-image-gallery {
