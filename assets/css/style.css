@@ -16598,6 +16598,7 @@ button:focus {
 
 .products .product {
   width: 100%;
+  border: 1px dotted #e0c6c6;
 }
 
 .product {
@@ -25445,4 +25446,98 @@ button:focus {
 .bank_card-no p {
   font-weight: bold;
   color: #fff !important;
+}
+
+/* address dashboard */
+
+.select-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.select-box.active {
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+.radio-card input {
+  display: none;
+}
+
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: none;
+}
+
+.radio-card input:checked + .card-content-wrapper .check-icon {
+  display: block;
+}
+
+.address-box .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address-box .badge {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.address-box .middle .address,
+.address-box .middle .number {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.bottom {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.bottom_btn {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.btn-remove {
+  background-color: #dc3545;
+}
+
+.btn-remove:hover {
+  background-color: #c82333;
+}
+
+.btn-edit {
+  background-color: #28a745;
+}
+
+.btn-edit:hover {
+  background-color: #218838;
+}
+
+.select-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }

@@ -560,7 +560,7 @@
                         role="tab"
                         aria-controls="tab-address"
                         aria-selected="false"
-                        >Adresses</a
+                        >Addresses</a
                       >
                     </li>
                     <li class="nav-item">
@@ -897,56 +897,323 @@
                       role="tabpanel"
                       aria-labelledby="tab-address-link"
                     >
-                      <p>
-                        The following addresses will be used on the checkout
-                        page by default.
-                      </p>
-
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <div class="card card-dashboard">
-                            <div class="card-body">
-                              <h3 class="card-title">Billing Address</h3>
-                              <!-- End .card-title -->
-
-                              <p>
-                                User Name<br />
-                                User Company<br />
-                                John str<br />
-                                New York, NY 10001<br />
-                                1-234-987-6543<br />
-                                <a
-                                  href="/cdn-cgi/l/email-protection"
-                                  class="__cf_email__"
-                                  data-cfemail="a8d1c7dddac5c9c1c4e8c5c9c1c486cbc7c5"
-                                  >[email&#160;protected]</a
-                                ><br />
-                                <a href="#">Edit <i class="icon-edit"></i></a>
-                              </p>
-                            </div>
-                            <!-- End .card-body -->
-                          </div>
-                          <!-- End .card-dashboard -->
-                        </div>
-                        <!-- End .col-lg-6 -->
-
-                        <div class="col-lg-6">
-                          <div class="card card-dashboard">
-                            <div class="card-body">
-                              <h3 class="card-title">Shipping Address</h3>
-                              <!-- End .card-title -->
-
-                              <p>
-                                You have not set up this type of address yet.<br />
-                                <a href="#">Edit <i class="icon-edit"></i></a>
-                              </p>
-                            </div>
-                            <!-- End .card-body -->
-                          </div>
-                          <!-- End .card-dashboard -->
-                        </div>
-                        <!-- End .col-lg-6 -->
+                      <div class="text-right mb-3">
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          data-toggle="modal"
+                          data-target="#exampleModal"
+                        >
+                          Add Address
+                        </button>
                       </div>
+
+                      <!-- Button trigger modal -->
+
+                      <!--add Modal -->
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Add Address
+                              </h5>
+                              <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                              >
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="p-4">
+                                <div class="row">
+                                  <div class="col-md-6 col-12 mb-3">
+                                    <label for="Username*">Name*</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="name*"
+                                      placeholder="Enter Your Username*"
+                                      required=""
+                                      value="suraj"
+                                    />
+                                  </div>
+                                  <div class="col-md-6 col-12 mb-3">
+                                    <label for="Username*"
+                                      >Mobile Number*</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="number*"
+                                      placeholder="Enter Your Mobile *"
+                                      required=""
+                                      value="9876543210"
+                                    />
+                                  </div>
+                                  <div class="col-md-12 col-12 mb-3">
+                                    <label for="Username*">Address*</label>
+
+                                    <textarea
+                                      class="form-control"
+                                      id="exampleFormControlTextarea1"
+                                      rows="3"
+                                    ></textarea>
+                                  </div>
+                                  <div class="col-md-12 col-12 mb-3">
+                                    <label for="Username*">Type*</label>
+
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault1"
+                                      />
+                                      <label
+                                        class="form-check-label mx-3"
+                                        for="flexRadioDefault1"
+                                      >
+                                        Home
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault2"
+                                        checked=""
+                                      />
+                                      <label
+                                        class="form-check-label mx-3"
+                                        for="flexRadioDefault2"
+                                      >
+                                        Office
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row g-4 d-flex" style="gap: 20px">
+                        <div class="select-box active col-xl-4 col-md-6">
+                          <label for="radio-card-1" class="radio-card">
+                            <input
+                              type="radio"
+                              name="radio-card"
+                              id="radio-card-1"
+                              checked=""
+                            />
+                            <div class="card-content-wrapper">
+                              <span class="check-icon"></span>
+                              <div class="address-box">
+                                <div class="top">
+                                  <h6>
+                                    Suraj Jamdade
+                                    <span class="badge">home</span>
+                                  </h6>
+                                </div>
+                                <div class="middle">
+                                  <div class="address">
+                                    <p>549 Sulphur Springs Road</p>
+                                    <p>Downers Grove, IL</p>
+                                    <p>60515</p>
+                                  </div>
+                                  <div class="number">
+                                    <p>
+                                      mobile:
+                                      <span>+91 123 - 456 - 7890</span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="bottom">
+                                  <a href="#" class="bottom_btn btn-remove"
+                                    ><i class="fa fa-times"></i
+                                  ></a>
+                                  <a
+                                    href="#"
+                                    class="bottom_btn btn-edit"
+                                    type="button"
+                                    data-toggle="modal"
+                                    data-target="#editModal"
+                                    ><i class="fa fa-edit"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+                        <div class="select-box col-xl-4 col-md-6">
+                          <label for="radio-card-2" class="radio-card">
+                            <input
+                              type="radio"
+                              name="radio-card"
+                              id="radio-card-2"
+                            />
+                            <div class="card-content-wrapper">
+                              <span class="check-icon"></span>
+                              <div class="address-box">
+                                <div class="top">
+                                  <h6>
+                                    Suraj Jamdade
+                                    <span class="badge">office</span>
+                                  </h6>
+                                </div>
+                                <div class="middle">
+                                  <div class="address">
+                                    <p>549 Sulphur Springs Road</p>
+                                    <p>Downers Grove, IL</p>
+                                    <p>60515</p>
+                                  </div>
+                                  <div class="number">
+                                    <p>
+                                      mobile:
+                                      <span>+91 123 - 456 - 7890</span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="bottom">
+                                  <a href="#" class="bottom_btn btn-remove"
+                                    ><i class="fa fa-times"></i
+                                  ></a>
+                                  <a
+                                    href="#"
+                                    class="bottom_btn btn-edit"
+                                    type="button"
+                                    data-toggle="modal"
+                                    data-target="#editModal"
+                                    ><i class="fa fa-edit"></i
+                                  ></a>
+                                </div>
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+
+                      <!--edit Modal -->
+                      <div
+                        class="modal fade"
+                        id="editModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Edit Address
+                              </h5>
+                              <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                              >
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="p-4">
+                                <div class="row">
+                                  <div class="col-md-6 col-12 mb-3">
+                                    <label for="Username*">Name*</label>
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="name*"
+                                      placeholder="Enter Your Username*"
+                                      required=""
+                                      value="suraj"
+                                    />
+                                  </div>
+                                  <div class="col-md-6 col-12 mb-3">
+                                    <label for="Username*"
+                                      >Mobile Number*</label
+                                    >
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="number*"
+                                      placeholder="Enter Your Mobile *"
+                                      required=""
+                                      value="9876543210"
+                                    />
+                                  </div>
+                                  <div class="col-md-12 col-12 mb-3">
+                                    <label for="Username*">Address*</label>
+
+                                    <textarea
+                                      class="form-control"
+                                      id="exampleFormControlTextarea1"
+                                      rows="3"
+                                    ></textarea>
+                                  </div>
+                                  <div class="col-md-12 col-12 mb-3">
+                                    <label for="Username*">Type*</label>
+
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault1"
+                                      />
+                                      <label
+                                        class="form-check-label mx-3"
+                                        for="flexRadioDefault1"
+                                      >
+                                        Home
+                                      </label>
+                                    </div>
+                                    <div class="form-check">
+                                      <input
+                                        class="form-check-input"
+                                        type="radio"
+                                        name="flexRadioDefault"
+                                        id="flexRadioDefault2"
+                                        checked=""
+                                      />
+                                      <label
+                                        class="form-check-label mx-3"
+                                        for="flexRadioDefault2"
+                                      >
+                                        Office
+                                      </label>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                       <!-- End .row -->
                     </div>
                     <!-- .End .tab-pane -->
